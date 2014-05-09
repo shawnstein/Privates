@@ -21,7 +21,7 @@ int main() {
 	strcat(syscall, commit);
 	strcat(syscall, " && git push origin master");
 	system(syscall);
-	printf("\nOk.");
+	printf("\nOk.\n");
 
 	return 0;
 }
