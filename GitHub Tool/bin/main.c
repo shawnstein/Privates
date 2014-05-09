@@ -15,7 +15,8 @@ int main() {
 	char syscall[1024];
 	
 	printf("\nPlease set your commit for actual update: ");
-	scanf("%s", &commit);
+	fgets(commit, sizeof(char) * 1024, stdin);
+    sscanf(commit, "%[^\n]", commit);
 	printf("\nConnecting to GitHub and update your work...");
 	strcat(syscall, "git add * && git commit -m ");
 	strcat(syscall, commit);
