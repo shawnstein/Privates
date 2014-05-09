@@ -10,7 +10,17 @@ cc GitHub\ Tool/bin/main.c -std=c99 -g -o GitHub\ Tool/src/a.out && gdb ./GitHub
 
 
 int main() {
-
+	char commit[1024];
+	char syscall[1024];
+	
+	printf("\nPlease set your commit for actual update: ");
+	scanf("%s", &commit);
+	printf("\nConnecting to GitHub and update your work...");
+	strcat(syscall, "git add * && git commit -m ");
+	strcat(syscall, commit);
+	strcat(syscall, " && git push origin master");
+	system(syscall);
+	printf("\nOk.");
 
 	return 0;
 }
