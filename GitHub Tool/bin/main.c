@@ -7,6 +7,7 @@ cc GitHub\ Tool/bin/main.c -std=c99 -g -o GitHub\ Tool/src/a.out && gdb ./GitHub
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 int main() {
