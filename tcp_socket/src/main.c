@@ -11,7 +11,7 @@ cc GitHub\ Tool/bin/main.c -std=c99 -g -o GitHub\ Tool/src/a.out && gdb ./GitHub
 #include <sys/types.h>
 #include <sys/socket.h>
 
-int socket(int family, int type, int protocol);
+int connect(int sockfd, struct sockaddr *address, socklen_t adress_length);
 
 int main() {
 
