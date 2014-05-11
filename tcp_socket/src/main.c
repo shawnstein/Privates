@@ -18,11 +18,11 @@ struct sockaddr_in {
 	in_port_t		sin_port;
 	struct in_addr	sin_addr;
 	char			sin_zero[];
-}
+};
 
 struct in_addr {
 	in_addr_t 		s_addr;
-}
+};
 
 int connect(int sockfd, struct sockaddr *address, socklen_t adress_length);
 
