@@ -8,21 +8,13 @@ cc tcp_socket/src/main.c -std=c99 -g -o tcp_socket/bin/a.out && gdb ./tcp_socket
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <stdint.h>
 
-struct sockaddr_in {
-	uint8_t 		sin_len;
-	sa_family_t		sin_family;
-	in_port_t		sin_port;
-	struct in_addr	sin_addr;
-	char			sin_zero[];
-};
-
-struct in_addr {
-	in_addr_t 		s_addr;
-};
+typedef uint8_t u_int
 
 int connect(int sockfd, struct sockaddr *address, socklen_t adress_length);
 
